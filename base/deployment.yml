@@ -19,10 +19,10 @@ spec:
         - name: ghcr-secret
       containers:
         - name: springboot
-          image: ghcr.io/beteko/spring-petclinic:4.1.0-SNAPSHOT
+          image: ghcr.io/beteko/spring-petclinic:4.0.0-SNAPSHOT
           env:
             - name: SERVER_SERVLET_CONTEXT_PATH # On force le contexte de l'application à tp6
-              value: "/tp6"
+              value: "/"
           startupProbe:
             httpGet:
               path: /actuator/health/readiness   # Endpoint Spring Boot Actuator pour vérifier la disponibilité
